@@ -10,6 +10,9 @@ namespace ShapesWarmup
     {
         static void Main(string[] args)
         {
+            var rectangle = new Rectangle(5, 4, "Rectangle");
+            Console.WriteLine(rectangle.ToString());
+            
         }
     }
 
@@ -23,6 +26,10 @@ namespace ShapesWarmup
         public string Name { get; private set; }
 
         public abstract double CalculateArea();
+        public override string ToString()
+        {
+            return $"{Name} does not have an implimented area";
+        }
 
         
     }
@@ -31,12 +38,35 @@ namespace ShapesWarmup
     {
         public Rectangle(int length, int width, string name = "Rectangle") : base(name)
         {
+            Width = width;
+            Length = length;
         }
+        public int Width { get; set; }
+        public int Length { get; set; }
 
         public override double CalculateArea()
         {
-            throw new NotImplementedException();
+            return (Length * Width);
+        }
+
+        public override string ToString()
+        {
+            return $"The {Name} has area {CalculateArea()}";
         }
     }
+    public class Square : Rectangle
+    {
+        public Square(int length, string name = "Square") : base(length)
+        {
+            Name = name;   
+        }
+        public string Name { get; set; }
+
+        public override double CalculateArea()
+        {
+            return (Length*Length);
+        }
+    }
+
 
 }
