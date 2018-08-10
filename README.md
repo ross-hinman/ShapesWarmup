@@ -5,7 +5,7 @@
 * Implement the Rectangle class.
     * Create Properties for Length and Width to store the length and width values from the constructor
     * Implement CalculateArea
-    * Override the ToString method so that it returns the string "This <shape name> has area <area>".  <shape name> = the name of the shape, <area> should be the result of the calculate area method, formatted to 2 decimal places.
+    * Override the ToString method so that it returns the string "This *shape name* has area *area*".  *shape name* = the name of the shape, *area* should be the result of the calculate area method, formatted to 2 decimal places.
 * Create an interface IColor
     * IColor should have 1 method: string GetColor();
 * Create Square class that inherits from Rectangle
